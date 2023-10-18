@@ -11,11 +11,13 @@ Features:
 <br>
 [+] God Mode
 <br>
-[+] Infinite Money
+[+] Change Money
 <br>
 [+] Infinite Ammo
 <br>
 [+] No Clip
+<br>
+[+] No Recoil
 <br>
 [+] Teleport to Coords
 <br>
