@@ -135,18 +135,7 @@ namespace Menu
 				ImGui::SameLine();
 				if (ImGui::Button("Select"))
 				{
-					if(Defines::Characters::Selection == "Origin")
-					Utils::ChangeValue<byte>(Offsets::Player::Character, Defines::Characters::Origin);
-					else if (Defines::Characters::Selection == "David")
-					Utils::ChangeValue<byte>(Offsets::Player::Character, Defines::Characters::David);
-					else if (Defines::Characters::Selection == "Kevin")
-					Utils::ChangeValue<byte>(Offsets::Player::Character, Defines::Characters::Kevin);
-					else if (Defines::Characters::Selection == "Pam")
-					Utils::ChangeValue<byte>(Offsets::Player::Character, Defines::Characters::Pam);
-					else if (Defines::Characters::Selection == "Cassandra")
-					Utils::ChangeValue<byte>(Offsets::Player::Character, Defines::Characters::Cassandra);
-					else if (Defines::Characters::Selection == "Willard")
-					Utils::ChangeValue<byte>(Offsets::Player::Character, Defines::Characters::Willard);
+					Character::SetCharacter();
 				}
 				ImGui::EndTabItem();
 			}
@@ -156,11 +145,11 @@ namespace Menu
 				ImGui::SameLine();
 				if(ImGui::Button("Set"))
 				{
-					Cheats::SetTimescale();
+					Game::SetTimescale();
 				}
 				ImGui::InputInt("Scene", &Defines::Game::Scene);
 				if (ImGui::Button("Set"))
-					Cheats::SetScene();
+					Game::SetScene();
 
 				ImGui::EndTabItem();
 			}
@@ -172,14 +161,14 @@ namespace Menu
 				ImGui::SameLine();
 				ImGui::Checkbox("No Recoil", &Defines::Player::bNoRecoil);
 				if (ImGui::Button("Toggle"))
-					Cheats::ToggleNoClip();
+					Player::ToggleNoClip();
 				ImGui::SameLine();
 				ImGui::Text("No Clip: %s", Defines::Player::bNoClip ? "True" : "False");
 				ImGui::Separator();
 				ImGui::InputInt("", &Defines::Player::AmountPoints, 1, 1000000);
 				ImGui::SameLine();
 				if(ImGui::Button("Set Money"))
-					Cheats::SetMoney();
+					Player::SetMoney();
 				ImGui::Separator();
 				ImGui::Text("Coordinates");
 				ImGui::Separator();
@@ -190,7 +179,7 @@ namespace Menu
 				ImGui::InputFloat("Y", &Defines::Player::Coordinates::Y, 1);
 				ImGui::InputFloat("Z", &Defines::Player::Coordinates::Z, 1);
 				if (ImGui::Button("Teleport"))
-					Cheats::SetCoordinates();
+					Player::SetCoordinates();
 
 				ImGui::EndTabItem();
 			}

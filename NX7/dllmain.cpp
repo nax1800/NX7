@@ -7,7 +7,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ulReason, LPVOID lpReserved)
        // Utils::OpenDevConsole();
         DisableThreadLibraryCalls(hModule);
         CreateThread(nullptr, 0, Menu::MainThread, hModule, 0, nullptr);
-        Cheats::StartThread();
+        CreateThread(nullptr, 0, Player::ToggleThread, 0, 0, nullptr);
     }
 
     return TRUE;

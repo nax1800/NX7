@@ -11,7 +11,6 @@
 #include "imgui/imgui.h"
 #include "imgui/imgui_impl_win32.h"
 #include "imgui/imgui_impl_dx11.h"
-#include "Memcury.h"
 
 #define LogNX(...) { std::cout << "[NX7]: " << std::format(__VA_ARGS__) << std::endl; }
 
@@ -22,7 +21,9 @@ typedef uintptr_t PTR;
 #include "Offsets.h"
 #include "Utils.h"
 #include "Defines.h"
-#include "Cheats.h"
+#include "Player.h"
+#include "Game.h"
+#include "Character.h"
 #include "Stats.h"
 #include "Style.h"
 #include "Menu.h"

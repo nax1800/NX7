@@ -141,13 +141,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Cheats.h" />
+    <ClInclude Include="Character.h" />
     <ClInclude Include="Defines.h" />
     <ClInclude Include="framework.h" />
+    <ClInclude Include="Game.h" />
     <ClInclude Include="kiero\minhook\include\MinHook.h" />
     <ClInclude Include="Memcury.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="Offsets.h" />
+    <ClInclude Include="Player.h" />
     <ClInclude Include="Stats.h" />
     <ClInclude Include="Style.h" />
     <ClInclude Include="Utils.h" />
